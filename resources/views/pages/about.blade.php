@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}"> 
+@extends('layouts.app')
+<!-- sad kao da smo dobili ceo kod u layouts.app u ovom fajlu -->
+<!-- i gde smo napisali yield i kako smo nazvali parametar tako i ovde sekciju imamo -->
+<!-- bukvalno sad u ovoj sekciji pisemo kao da ce taj kod da se ubaci umesto yield-a -->
+@section('kod')
+    <h1> Dobro dosli i cestitamo na postajanju clana Kulminacije znanja </h1>
+@endsection
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title> Kulminacija znanja </title>
-        
-    </head>
-    <body>
-        <h1> Dobro dosli i cestitamo na postajanju clana Kulminacije znanja </h1>
-        
-    </body>
-</html>
+
+

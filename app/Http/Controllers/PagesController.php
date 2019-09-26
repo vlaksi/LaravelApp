@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function pocetna(){
-        return view('pages.pocetna');
+        $naslov = 'Kulminacija znanja';
+        return view('pages.pocetna')->with('title',$naslov);
     }
 
     public function about(){
