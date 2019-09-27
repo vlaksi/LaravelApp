@@ -8,10 +8,10 @@
     <ul class="navbar-nav mr-auto">
 
       <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/"> Pocetna </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/about">About us</a>
+        <a class="nav-link" href="/about">O Aplikaciji</a>
       </li> 
       <li class="nav-item">
         <a class="nav-link" href="/materijali">Materijali</a>
