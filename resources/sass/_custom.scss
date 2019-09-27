@@ -1,9 +1,39 @@
 //Custom CSS
 
 body{ 
-    background-image: url("../img/computers.png");
+    //POZADINA
+    background-image: url("../img/computers.png") ;
     background-attachment: fixed;
     background-size: cover; 
 
     color: white; /* da bi tekst bio beo */
+
+    overflow-x: hidden;
+    font-family: 'Lato',sans-serif;
+    color: rgb(255, 255, 255);
+    
 } 
+//NAVIGATION
+
+.navbar{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: .9rem;
+    letter-spacing: .1rem;
+    background: rgba(0,0,0,0.6) !important; //da bi navbar bio malo proziran
+
+}
+
+.navbar-nav li{
+    padding-right: .7rem;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    color: rgb(255, 255, 255);
+    padding-top: .8rem;
+}
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover{
+    color: #1ebba3;
+}
+
