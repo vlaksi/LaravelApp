@@ -1,5 +1,8 @@
-
 //---------------------------------------CUSTOM------------------------------------
+
+//FONT
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
 //Custom CSS
 
 body{ 
@@ -19,7 +22,7 @@ body{
 
 .navbar{
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 700;
     font-size: .9rem;
     letter-spacing: .1rem;
     background: rgba(0,0,0,0.6) !important; //da bi navbar bio malo proziran
@@ -30,6 +33,7 @@ body{
     padding-right: .7rem;
 }
 
+
 .navbar-dark .navbar-nav .nav-link{
     color: rgb(255, 255, 255);
     padding-top: .8rem;
@@ -39,13 +43,13 @@ body{
     color: #1ebba3;
 }
 
+
 /*----LANDING PAGE-------- */
-.home-inner{
-    // background-image: 
-}
+
+
 .caption {
+    padding-top: 33%;
     //border: 2px solid red;
-    
     width: 100%;
     max-width: 100%;
     position: relative;
@@ -55,10 +59,49 @@ body{
     text-transform: uppercase;
 }
 
+//ideja je napraviti da kad je na telefonu ili necemo da je tekst normalne velicine
+//a da kad je na racunaru onda je mnogo veci i to je to
 .caption h1{
-    font-size: 3.8rem;
-    font-weight: 700;
-    letter-spacing: .3rem;
+    font-size: 2.7rem;
+    font-weight: 400;
+
+    letter-spacing: .2rem;
     text-shadow: .1rem .1rem .8rem black;
+    text-align: center;
 }
 
+.caption h3{
+    font-size: 1.2rem;
+    text-shadow: .1rem .1rem .5rem black;
+    padding-bottom: 2%;
+    padding-top: 1%;
+}
+
+.btn-lg{
+    border-width: medium;
+    border-radius: 0;
+    padding: .6rem 1.3rem;
+    font-size: 1.1rem;
+
+}
+
+//----------------------------KOD ZA DESKTOP VERZIJU-----------------------------
+@media only screen and ( min-width: 1000px ){
+    .caption {
+        padding-top: 15%;
+        
+    }
+    
+    .caption h1{
+        font-size: 3.8rem;
+        font-weight: 700;
+        letter-spacing: .3rem;
+        text-shadow: .1rem .1rem .8rem black;
+        text-align: center;
+    }
+
+    .caption h3{
+        font-size: 2rem;
+        text-shadow: .2rem .2rem .5rem black;
+    }
+}

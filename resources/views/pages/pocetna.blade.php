@@ -11,7 +11,7 @@
         </div>
 
         <div class="caption text-center">
-            <h1> Dobro dosli u Kulimnaciju znanja !</h1>
+            <h1> Dobro dosli u Kulminaciju znanja !</h1>
             <h3> Nadji materijal sa kojeg fakulteta ti je potreban.</h3>
             <a class="btn btn-outline-light btn-lg" href="#"> Registruj se </a>
         </div>
