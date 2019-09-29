@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark "> <!-- fixed-top mozda dodati --> 
   <a class="navbar-brand" href="#">KULMINACIJA</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -11,10 +11,16 @@
         <a class="nav-link" href="/"> Pocetna </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/about">O Aplikaciji</a>
+        <a class="nav-link" href="#nastanak">Nastanak</a>
       </li> 
       <li class="nav-item">
-        <a class="nav-link" href="/materijali">Materijali</a>
+        <a class="nav-link" href="#tim">Tim</a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link" href="#cilj">Cilj</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#kontakt">Kontakt</a>
       </li>
 
     </ul>

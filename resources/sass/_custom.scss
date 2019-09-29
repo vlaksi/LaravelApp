@@ -48,7 +48,7 @@ body{
 
 
 .caption {
-    padding-top: 33%;
+    padding-top: 10%;
     //border: 2px solid red;
     width: 100%;
     max-width: 100%;
@@ -88,7 +88,7 @@ body{
 //----------------------------KOD ZA DESKTOP VERZIJU-----------------------------
 @media only screen and ( min-width: 1000px ){
     .caption {
-        padding-top: 15%;
+        //padding-top: 15%;
         
     }
     
@@ -104,4 +104,26 @@ body{
         font-size: 2rem;
         text-shadow: .2rem .2rem .5rem black;
     }
+}
+
+
+//----------------------------KOD ZA SVAKU VERZIJU-----------------------------
+
+#ideja{
+
+}
+#tim{
+
+}
+
+#kontakt{
+
+}
+
+#nastanak{
+
+}
+
+#cilj{
+
 }

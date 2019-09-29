@@ -23,7 +23,7 @@
         <title> Kulminacija znanja </title>
         
     </head>
-    <body>
+    <body data-spy="scroll" data-target="#navbarResponsive">
         
         @include('inc.navbar') <!-- blade sintaksa i ovim ukljucujemo navbar u nas kostur -->
         <br><br><br>
