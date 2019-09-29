@@ -17,20 +17,18 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+    <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/bae25c5699.js" crossorigin="anonymous"></script>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
         <title> Kulminacija znanja </title>
         
     </head>
-    <body data-spy="scroll" data-target="#navbarResponsive">
-        
-        @include('inc.navbar') <!-- blade sintaksa i ovim ukljucujemo navbar u nas kostur -->
-        <br><br><br>
-        <div class="container"> <!-- pravimo da bi se nalazilo centrirano u stranici -->
-            <!-- gde god stavimo da smo extend ovaj fajl i napravimo sekciju kod,taj citav kod ce biti
-            prebacen umesto ovog ovde yield-a  -->
-            @yield('kod')
-        </div>
+    <body data-spy="scroll" data-target="#navbarSupportedContent">
+    
+        @include('inc.navbar')
+        @yield('kod') <!-- ovde dolazi kod ( u ovaj kostur ) koji smo kucali negde posebno  -->
+
     </body>    
 </html>

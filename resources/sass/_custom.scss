@@ -1,4 +1,81 @@
+/*--- Extra Bootstrap Column Padding --*/
+[class*="col-"] {
+    padding: 1rem;
+  }
+  
+  /*--- Bootstrap Mobile Gutter Fix --*/
+  .row, .container-fluid {
+  margin-left: 0px!important;
+  margin-right: 0px!important;
+  }
+  
+  /*--- Fix for Fixed Navbar jumping on scroll --*/
+  .fixed-top  {
+   -webkit-backface-visibility: hidden;
+  }
+  
+  /*--- Fixed Landing Page Section --*/
+  .landing {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: table;
+    z-index: -1;
+  }
+  .home-wrap {
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .home-inner {
+    position: fixed;
+    display: table;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    will-change: transform;
+  }
+  
+  /*--- iOS Fixed Background Image --*/
+  .fixed-background {
+    position: relative;
+    width: 100%;
+  }
+  .fixed-wrap {
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -999!important;
+  }
+  .fixed {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    will-change: transform;
+  }
+//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 //---------------------------------------CUSTOM------------------------------------
+//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 
 //FONT
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
@@ -6,16 +83,11 @@
 //Custom CSS
 
 body{ 
-    //POZADINA
-    background-image: url("../img/computers.png") ;
-    background-attachment: fixed;
-    background-size: cover; 
-
-    color: white; /* da bi tekst bio beo */
+    //color: white; /* da bi tekst bio beo */
 
     overflow-x: hidden;
     font-family: 'Lato',sans-serif;
-    color: rgb(255, 255, 255);
+    color: #505962;
     
 } 
 //NAVIGATION
@@ -45,14 +117,16 @@ body{
 
 
 /*----LANDING PAGE-------- */
-
+.home-inner{
+    background-image: url("../img/computers.png");
+}
 
 .caption {
-    padding-top: 10%;
+    //padding-top: -10%;
     //border: 2px solid red;
     width: 100%;
     max-width: 100%;
-    position: relative;
+    position: absolute;
     top: 38%;
     z-index: 1;
     color: white;
@@ -62,7 +136,7 @@ body{
 //ideja je napraviti da kad je na telefonu ili necemo da je tekst normalne velicine
 //a da kad je na racunaru onda je mnogo veci i to je to
 .caption h1{
-    font-size: 2.7rem;
+    font-size: 2.2rem;
     font-weight: 400;
 
     letter-spacing: .2rem;
@@ -71,7 +145,7 @@ body{
 }
 
 .caption h3{
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-shadow: .1rem .1rem .5rem black;
     padding-bottom: 2%;
     padding-top: 1%;
@@ -101,16 +175,16 @@ body{
     }
 
     .caption h3{
-        font-size: 2rem;
+        font-size: 1.8rem;
         text-shadow: .2rem .2rem .5rem black;
     }
 }
 
 
 //----------------------------KOD ZA SVAKU VERZIJU-----------------------------
-
 #ideja{
-
+    //color: #31c257;
+    
 }
 #tim{
 
