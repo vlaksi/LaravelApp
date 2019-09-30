@@ -39,7 +39,7 @@
     <div id="nastanak" class="offset">
         <!-- START JUMBOTRON -->
         <div class="jumbotron">
-            <div class="narrow"> 
+            <div class="narrow text-center"> 
 
                 <div class="col-12">
                     <h3 class="heading"> Nastanak </h3>
@@ -54,8 +54,8 @@
                             <i class="fas fa-mug-hot fa-3x"></i>
                             <h3>Druzenje</h3>
                             <p> Sve ideje i tako pocinju,uz kafu i razmisljanje.Sta bi to moglo dobrineti zajednici.
+                                    Zbog toga i jesmo tu,da bi svojim znanjem,doprineli i pomogli onima kojima je to potrebno!
                             </p>
-                            <p>Zbog toga i jesmo tu,da bi svojim znanjem,doprineli i pomogli onima kojima je to potrebno!</p>
                         </div>
                     </div>
 
@@ -73,8 +73,7 @@
                             <i class="fas fa-cubes fa-3x"></i>
                             <h3>Proizvod</h3>
                             <p> I na kraju kao kruna naseg prijateljstva i naseg truda rada i kafe,dolazi proizvod u koji verujemo 
-                                i koji funkcionise.</p>
-                            <p>Do neke nove kafe...</p>
+                                i koji funkcionise. <br> Do neke nove kafe... </p>
                         </div>
                     </div>
 
@@ -88,10 +87,12 @@
     <!-- Starting Tim Page Section -->
     <div id="tim" class="offset">
         <div class="fixed-background">
-            <div class="row dark text-center">
+            <div class="row dark text-center">          <!-- U CUSTOM CSS posle editujem dark kako bi pozadina bila tamna -->
 
                 <div class="col-12">
-                    <h3 class="heading"> Ucimo,primenjujemo,delimo. </h3>
+                    <div class="container">
+                            <h3 class="heading">Ucimo,primenjujemo,delimo</h3>
+                    </div>
                     <div class="heading-underline"></div>
                 </div>
 
@@ -99,8 +100,7 @@
                     <div class="feature">
                         <i class="fas fa-book fa-2x"></i>
                         <h3>Ucenje</h3>
-                        <p>Obrazovanje je najmocnije oruzje koje mozete upotrebiti da promenite svet</p>
-                        <p>Knjige, braco moja, knjige, a ne zvona i praporce</p>
+                        <p>Obrazovanje je najmocnije oruzje koje mozete upotrebiti da promenite svet <br> Knjige, braco moja, knjige, a ne zvona i praporce</p>
                     </div>
                 </div>
 
@@ -108,9 +108,8 @@
                     <div class="feature">
                         <i class="fas fa-angle-double-up fa-2x"></i>
                         <h3>Primenjivanje</h3>
-                        <p> Pravimo promene koje zelimo da vidimo sutra u svetu !
+                        <p> Pravimo promene koje zelimo da vidimo sutra u svetu ! <br> Dela,ne reci!
                         </p>
-                        <p> Dela,ne reci!</p>
                     </div>
                 </div>
 
@@ -142,7 +141,7 @@
         <div class="jumbotron">
 
             <div class="col-12 text-center">
-                <h3 class="heading"> Cilj aplikacije </h3>
+                <h3 class="heading"> Podrzali aplikaciju </h3>
                 <div class="heading-underline"></div>
             </div>
         
@@ -167,7 +166,7 @@
                 <div class="col-md-6 klijent">
                     <div class="row">
                         <div class="col-md-4">
-                            <!-- <img src="http://museumofsolidarity.eu/wp-content/uploads/2017/08/pupinfeat2.jpg"> -->
+                            <img src="http://museumofsolidarity.eu/wp-content/uploads/2017/08/pupinfeat2.jpg">
                         </div>
                         <div class="col-md-8">
                             <blockquote>
@@ -183,12 +182,38 @@
             </div>
         </div> <!-- END Jumbotron -->
 
+        <div class="col-12 narrow text-center">
+            <p class="lead"> Nasem timu su uvek dobro dosle ideje i uvek smo spremni za saradnju,ako imas neki predlog,javi nam se. </p>
+            <a class="btn btn-secondary btn-md" href="#" target="_blank"> Javi se </a>
+        </div>
+
     </div>
     <!-- End Cilj Page Section -->
 
     <!-- Starting Kontakti Page Section -->
     <div id="kontakt" class="offset">
-        
+        <!-- START Footer -->
+        <footer>
+            <div class="row justify-content-center">
+                
+                <div class="col-md-5 text-center">
+                    <i class="fas fa-id-card-alt fa-4x"></i>
+                    <h1>! Kulminacija Znanja !</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae, explicabo sint perferendis maxime suscipit consectetur dolor modi, at tenetur assumenda, error corrupti. Esse, delectus consectetur excepturi deserunt dolor labore.</p>
+                    <strong>Kontakt informacije</strong>
+                    <p>+381 61 26-555-62 <br> daksrapsody@gmail.com <br></p>
+
+                    <a href="" target="_blank"><i class="fab fa-facebook-square fa-2x"> </i></a>
+                    <a href="" target="_blank"><i class="fab fa-twitter-square fa-2x"> </i></a>
+                    <a href="" target="_blank"><i class="fab fa-instagram fa-2x"> </i></a>
+
+                </div>
+
+                <hr class="socket"> 
+                &copy; Vladislav Maksimovic 
+            </div>
+        </footer>
+        <!-- END Footer -->
 
     </div>
     <!-- End Kontakti Page Section -->
