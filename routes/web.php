@@ -26,9 +26,9 @@ Route::get('/about',function(){
 });
 */
 
-Route::get('/','PagesController@pocetna');
-Route::get('/about','PagesController@about');
+Route::get('/','PagesController@pocetna');              //prvi argument je url koji ce biti,a drugi kontroler@fja i ta odredjena
+Route::get('/about','PagesController@about');           //fja npr vrati neki view i prikazuje neku stranicu
 Route::get('/materijali','PagesController@materijali');
 
-
+Route::resource('posts','PostsController');             //samo pravi sve routove za fje koje smo prethodno napravili u PostsController
 

@@ -10842,6 +10842,50 @@ body {
   border-color: #189582;
 }
 
+a.btn.btn-success.btn-lg,
+.btn-group-lg > a.btn.btn-success {
+  width: 12rem;
+  font-weight: 900;
+  border-width: medium;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-color: #189582;
+  letter-spacing: 0.05rem;
+  padding: 0.6rem 1.2rem;
+  margin: 1rem;
+}
+
+a.btn.btn-success.btn-lg:hover,
+.btn-group-lg > a.btn.btn-success:hover {
+  background-color: #189582;
+  border-color: #189582;
+}
+
+a.btn.btn-primary.btn-lg,
+.btn-group-lg > a.btn.btn-primary {
+  width: 12rem;
+  font-weight: 900;
+  border-width: medium;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-color: #189582;
+  letter-spacing: 0.05rem;
+  padding: 0.6rem 1.2rem;
+  margin: 1rem;
+}
+
+a.btn.btn-primary.btn-lg:hover,
+.btn-group-lg > a.btn.btn-primary:hover {
+  background-color: #189582;
+  border-color: #189582;
+}
+
 .jumbotron {
   margin-bottom: 0;
   padding: 2rem 0 3.5rem;

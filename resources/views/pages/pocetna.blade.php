@@ -17,7 +17,8 @@
                 <div class="container"> <!-- stavio kontenjer da bi bolje izgledalo -->
                         <h1> Dobro dosli u Kulminaciju znanja !</h1>
                         <h3> Nadji materijal sa kojeg fakulteta ti je potreban.</h3>
-                        <a class="btn btn-outline-light btn-lg" href="#"> Registruj se </a>
+                       <!-- <a class="btn btn-outline-light btn-lg" href="#"> Registruj se </a> -->
+                        <p><a class="btn btn-primary btn-lg" href="/login" role="button"> Prijavi se </a> <a class="btn btn-success btn-lg" href="/register" role="button"> Registruj se</a></p>
                 </div>
             </div>
         <!-- End Landing Page Section -->
@@ -198,7 +199,7 @@
                 
                 <div class="col-md-5 text-center">
                     <i class="fas fa-id-card-alt fa-4x"></i>
-                    <h1>! Kulminacija Znanja !</h1>
+                    <h1> Kulminacija Znanja </h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae, explicabo sint perferendis maxime suscipit consectetur dolor modi, at tenetur assumenda, error corrupti. Esse, delectus consectetur excepturi deserunt dolor labore.</p>
                     <strong>Kontakt informacije</strong>
                     <p>+381 61 26-555-62 <br> daksrapsody@gmail.com <br></p>

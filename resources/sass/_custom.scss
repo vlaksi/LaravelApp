@@ -216,6 +216,48 @@ body{
     border-color: #189582;
 }
 
+a.btn.btn-success.btn-lg{ //za REGISTER stajl
+    width: 12rem;
+    font-weight: 900;
+
+
+    border-width: medium;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    border-color: #189582;
+    letter-spacing: .05rem;
+    padding: .6rem 1.2rem;
+    margin: 1rem;
+}
+a.btn.btn-success.btn-lg:hover{
+    background-color: #189582;
+    border-color: #189582;
+}
+
+a.btn.btn-primary.btn-lg{ //za login stajl
+    width: 12rem;
+    font-weight: 900;
+
+
+    border-width: medium;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    border-color: #189582;
+    letter-spacing: .05rem;
+    padding: .6rem 1.2rem;
+    margin: 1rem;
+}
+a.btn.btn-primary.btn-lg:hover{
+    background-color: #189582;
+    border-color: #189582;
+}
+
 //----------------------------KRAJ Ideja-stila------------------------------------
 
 //----------------------------POCETAK Nastanak-stila------------------------------
