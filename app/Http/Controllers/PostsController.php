@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Post;                               // i s ovim mozemo da koristimo koju hocemo fju modela
+use DB;                                     //ako necemo elokvent da koristimo nego SQL
 class PostsController extends Controller
 {
     /**
@@ -13,7 +14,15 @@ class PostsController extends Controller
      */
     public function index()
     {
-        //
+        // ispisao bi sve podatke iz baze sa ovom komandom return Post::all();
+       // $posts = Post::all();
+       // $posts = DB::select('SELECT * FROM posts');       preko sql,radi isto sto i Post::all(); tj da nam citav post
+       // $posts = Post::orderBy('created_at','desc')->take(1)->get(); i tako dobijemo PRIKAZAN samo jedan post 
+       //$posts = Post::orderBy('created_at','desc')->get();            //stavimo u posts sortirane sve postove 
+       $posts = Post::orderBy('created_at','desc')->paginate(3);        //koliko postova da se prikaze po stranici u paginate se stavlja 
+       return view('posts.index')->with('posts',$posts);                //argument u paginate je broj postova koje zelimo na jednoj 
+                                                                        //stranici prikazati
+
     }
 
     /**
@@ -23,7 +32,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.create');
     }
 
     /**
@@ -34,7 +43,13 @@ class PostsController extends Controller
      */
     public function store(Request $request)                 //iz forme cemo uzimati varijable i to ce primati objekat request
     {
-        //
+        //Validacija tj provera 
+        $this->validate($request, [   
+            'title' => 'required',
+            'body' => 'required'
+        ]);
+
+        return 123;
     }
 
     /**
@@ -45,7 +60,10 @@ class PostsController extends Controller
      */
     public function show($id)                               //pokazivacemo odredjeni post na osnovu id npr
     {
-        //
+        //return Post::find($id);                             //nacice taj post(po idu) i prikazacemo ga
+        $post = Post::find($id);
+        return view('posts.show')->with('post',$post);      //vracamo da prikazemo stranicu show(u folderu posts)
+                                                            //i jos prosledjujem citav post da moze da se koristi 
     }
 
     /**

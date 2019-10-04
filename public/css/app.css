@@ -11010,3 +11010,40 @@ hr.socket {
   margin-top: 3rem;
 }
 
+/*****************************Pocetak Stila Postova(svih postova)*********************/
+
+.darkPosts {
+  background-color: rgba(0, 0, 0, 0.45);
+  color: white;
+  padding: 7rem 2rem;
+  padding-bottom: 30rem;
+}
+
+div.card.card-body.bg-light {
+  border-color: rgba(12, 114, 98, 0.1);
+  margin: 1rem auto;
+}
+
+div.card.card-body.bg-light h3 {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+div.card.card-body.bg-light p {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+div.card.card-body.bg-light small {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+div.card.card-body.bg-light h3 a {
+  color: rgba(12, 114, 98, 0.7);
+}
+
+div.card.card-body.bg-light h3 a:hover {
+  color: #0c7262;
+  text-decoration: none;
+}
+
+/*************************************************************************************/
+

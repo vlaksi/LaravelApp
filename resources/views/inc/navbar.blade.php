@@ -11,20 +11,25 @@
         <a class="nav-link" href="/"> Pocetna </a>
       </li>
       <li class="nav-item">
-          <a class="nav-link" href="#ideja">Ideja</a>
+          <a class="nav-link" href="/#ideja">Ideja</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#nastanak">Nastanak</a>
+        <a class="nav-link" href="/#nastanak">Nastanak</a>
       </li> 
       <li class="nav-item">
-        <a class="nav-link" href="#tim">Tim</a>
+        <a class="nav-link" href="/#tim">Tim</a>
       </li> 
       <li class="nav-item">
-        <a class="nav-link" href="#cilj">Cilj</a>
+        <a class="nav-link" href="/#cilj">Cilj</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#kontakt">Kontakt</a>
+        <a class="nav-link" href="/#kontakt">Kontakt</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/posts">Blog</a>
+      </li>
+      
+
 
     </ul>
   </div>

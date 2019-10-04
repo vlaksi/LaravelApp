@@ -405,3 +405,45 @@ hr.socket{
 
 
 //----------------------------KRAJ Kontakti-stila-------------------------------------- 
+
+
+/*****************************Pocetak Stila Postova(svih postova)*********************/
+.darkPosts{                                          //CSS za stranicu gde su svi postovi
+    background-color: rgba(0,0,0,0.45);
+    color:white;
+    padding: 7rem 2rem;
+    padding-bottom: 30rem;                           //dodao kako bi slika bila preko cele stranice a ne samo deo( moze i na drugi nacin :D )
+}                                               
+
+
+
+div.card.card-body.bg-light{
+    border-color: rgba($color: #0c7262, $alpha: 0.1);
+    margin: 1rem auto;
+}
+
+div.card.card-body.bg-light h3{                         //za naslov u kartici
+    color: rgba(0,0,0,0.45);
+
+}
+div.card.card-body.bg-light p{                          //za tekst
+    color: rgba(0,0,0,0.45);
+
+}
+div.card.card-body.bg-light small{
+    color: rgba(0,0,0,0.45);
+}
+
+div.card.card-body.bg-light h3 a{                          //za tekst
+   // color: rgba(0,0,0,0.45);
+    color: rgba($color: #0c7262, $alpha: 0.7);
+
+}
+div.card.card-body.bg-light h3 a:hover{                          //za tekst
+    color: #0c7262;
+    text-decoration: none;
+
+}
+
+
+/*************************************************************************************/
