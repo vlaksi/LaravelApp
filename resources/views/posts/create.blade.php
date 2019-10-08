@@ -1,17 +1,18 @@
 @extends('layouts.app')
-
+<!-- /posts/create -->
 
 @section('kod')
     <div class="fixed-background">                                
         <div class="darkPosts">                                      <!-- Kako bi slika u pozadini bila pokrivena prozirnom crnom(custom je css ) -->
-            <div class="container">                            
+            <div class="container">  
+                @include('inc.messages')                             <!-- Ukljucujem poruke o greskama ili uspesnom kreiranju posta -->                          
                 <!-- <br><br><br><br> -->
                 <h1>Kreiraj clanak</h1>
 
                 <!-- dajemo mogucnost davanja naziva novog posta -->
                 {!! Form::open( ['action' => 'PostsController@store' , 'method' => 'POST' ] ) !!}
                     <div class="form-group">
-                        {{Form::label('title','Naslov') }}            <!-- drugi parametar je sta ce da pise -->
+                        {{Form::label('title','Naslov') }}            <!--prvi je polje objekta request, drugi parametar je sta ce da pise -->
                         {{Form::text('title','',[ 'class' => 'form-control' , 'placeholder' => 'Ukucaj naslov teksta' ]  ) }}
                     </div>
                 <!-- DEO ZA BODY,kako bi mogao da se postavi neki clanak -->

@@ -6,6 +6,7 @@
         <div class="darkPosts">                                      <!-- Kako bi slika u pozadini bila pokrivena prozirnom crnom(custom je css ) -->
             <div class="container">                            
                 <!-- <br><br><br><br> -->
+                @include('inc.messages')
                 <h1>Svi objavljeni postovi</h1>
         
                 @if (count($posts) > 0 )                        <!-- ako ima postova -->

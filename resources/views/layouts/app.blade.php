@@ -26,8 +26,10 @@
         
     </head>
     <body data-spy="scroll" data-target="#navbarSupportedContent">
-    
+       
+
         @include('inc.navbar')
+
         @yield('kod') <!-- ovde dolazi kod ( u ovaj kostur ) koji smo kucali negde posebno  -->
 
     </body>    

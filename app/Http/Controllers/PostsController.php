@@ -49,7 +49,13 @@ class PostsController extends Controller
             'body' => 'required'
         ]);
 
-        return 123;
+        //Kreiranje posta
+        $post = new Post;
+        $post->title= $request->input('title');
+        $post->body = $request->input('body');
+        $post->save();
+
+        return redirect('/posts')->with('success','Clanak je uspesno kreiran!');
     }
 
     /**
