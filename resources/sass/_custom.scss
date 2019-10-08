@@ -82,6 +82,15 @@
 
 //Custom CSS
 
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: #1ebba3;
+    text-decoration: none;
+}
+
 body{ 
     //color: white; /* da bi tekst bio beo */
 
@@ -446,4 +455,34 @@ div.card.card-body.bg-light h3 a:hover{                          //za tekst
 }
 
 
+/*************************************************************************************/
+/*************************************************************************************/
+
+/*****************************Pocetak Stila Dugmeta za brisanje***********************/
+
+input.btn.btn-primary.btn-lg{
+    width: 12rem;
+    font-weight: 900;
+    border-width: medium;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-color: #189582;
+    letter-spacing: 0.05rem;
+    padding: 0.6rem 1.2rem;
+    margin: 1rem;
+}
+input.btn.btn-primary.btn-lg:hover{
+    background-color: #189582;
+    border-color: #189582;
+}
+
+
+
+
+
+/*************************************************************************************/
+/*************************************************************************************/
 /*************************************************************************************/

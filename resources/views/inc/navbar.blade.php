@@ -28,10 +28,12 @@
       <li class="nav-item">
         <a class="nav-link" href="/posts">Blog</a>
       </li>
-      
-
-
     </ul>
+    
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/posts/create"> Kreiraj clanak </a> </li>
+    </ul>
+  
   </div>
 </nav>
       

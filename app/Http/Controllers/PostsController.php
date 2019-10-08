@@ -80,7 +80,9 @@ class PostsController extends Controller
      */
     public function edit($id)                               //da bi znao koji post da edituje,imamo argument id
     {
-        //
+        $post = Post::find($id);
+
+        return view('posts.edit')->with('post',$post);
     }
 
     /**
@@ -92,7 +94,19 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)           //argument request jer dodajem novi post(jeste izmenjen ali je pak novi)
     {                                                       //id da bi znali o kome se radi
-        //
+        //Validacija tj provera 
+        $this->validate($request, [   
+            'title' => 'required',
+            'body' => 'required'
+        ]);
+
+        //Kreiranje posta
+        $post = Post::find($id);                            //nadjemo taj post kako bi ga izmenili
+        $post->title= $request->input('title');
+        $post->body = $request->input('body');
+        $post->save();
+
+        return redirect('/posts')->with('success','Clanak je uspesno izmenjen!');
     }
 
     /**
@@ -103,6 +117,9 @@ class PostsController extends Controller
      */
     public function destroy($id)                            //id da bi znali koji post da unistimo
     {
-        //
+        $post = Post::find($id);
+        $post->delete();
+
+        return redirect('/posts')->with('success','Clanak je uspesno uklonjen!');
     }
 }

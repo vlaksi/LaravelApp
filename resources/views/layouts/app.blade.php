@@ -22,6 +22,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+    <script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
+   	<!--CKEditor je linija koda iznad -->
+
         <title> Kulminacija znanja </title>
         
     </head>
@@ -32,5 +35,10 @@
 
         @yield('kod') <!-- ovde dolazi kod ( u ovaj kostur ) koji smo kucali negde posebno  -->
 
+        <!--CKEditor-->
+        <script>
+            CKEDITOR.replace( 'article-ckeditor' );
+        </script>
+        
     </body>    
 </html>

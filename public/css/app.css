@@ -10726,6 +10726,16 @@ a.text-dark:focus {
   will-change: transform;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1ebba3;
+  text-decoration: none;
+}
+
 body {
   overflow-x: hidden;
   font-family: "Lato", sans-serif;
@@ -11044,6 +11054,38 @@ div.card.card-body.bg-light h3 a:hover {
   color: #0c7262;
   text-decoration: none;
 }
+
+/*************************************************************************************/
+
+/*************************************************************************************/
+
+/*****************************Pocetak Stila Dugmeta za brisanje***********************/
+
+input.btn.btn-primary.btn-lg,
+.btn-group-lg > input.btn.btn-primary {
+  width: 12rem;
+  font-weight: 900;
+  border-width: medium;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-color: #189582;
+  letter-spacing: 0.05rem;
+  padding: 0.6rem 1.2rem;
+  margin: 1rem;
+}
+
+input.btn.btn-primary.btn-lg:hover,
+.btn-group-lg > input.btn.btn-primary:hover {
+  background-color: #189582;
+  border-color: #189582;
+}
+
+/*************************************************************************************/
+
+/*************************************************************************************/
 
 /*************************************************************************************/
 
