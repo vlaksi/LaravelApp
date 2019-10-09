@@ -32,3 +32,9 @@ Route::get('/materijali','PagesController@materijali');
 
 Route::resource('posts','PostsController');             //samo pravi sve routove za fje koje smo prethodno napravili u PostsController
 
+
+Auth::routes();
+
+Route::get('/dashboard', 'DashboardController@index');
+
+

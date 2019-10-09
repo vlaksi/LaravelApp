@@ -93,7 +93,7 @@ a:hover{
 
 body{ 
     //color: white; /* da bi tekst bio beo */
-
+    
     overflow-x: hidden;
     font-family: 'Lato',sans-serif;
     color: #505962;
@@ -477,6 +477,20 @@ input.btn.btn-primary.btn-lg{
 input.btn.btn-primary.btn-lg:hover{
     background-color: #189582;
     border-color: #189582;
+}
+
+
+/*****************************Pocetak Stila Logina-Registara**************************/
+
+.card{
+    margin-top: 5rem;
+}
+
+div.form-group.row{
+    // margin-top: -1rem;
+}
+[class*="col-"] {
+    padding-top: 0rem;
 }
 
 

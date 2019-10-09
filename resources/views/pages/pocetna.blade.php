@@ -167,7 +167,7 @@
                 <div class="col-md-6 klijent">
                     <div class="row">
                         <div class="col-md-4">
-                            <img src="http://museumofsolidarity.eu/wp-content/uploads/2017/08/pupinfeat2.jpg">
+                            {{-- <img src="http://museumofsolidarity.eu/wp-content/uploads/2017/08/pupinfeat2.jpg"> --}}
                         </div>
                         <div class="col-md-8">
                             <blockquote>
