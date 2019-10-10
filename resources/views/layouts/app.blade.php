@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -19,22 +19,26 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+    <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/bae25c5699.js" crossorigin="anonymous"></script>
+    
     <script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
     <!--CKEditor je linija koda iznad -->
+    <title> Kulminacija znanja </title>
        
 </head>
 <body data-spy="scroll" data-target="#navbarSupportedContent">
-    <div id="app">
+    {{-- <div id="app"> --}}
 
         {{-- <main class="py-4"> --}}
         @include('inc.navbar')
-        @yield('kod')
+        @yield('content')
             
         {{-- </main> --}}
-    </div>
-
-    <script>
+        <script>
             CKEDITOR.replace( 'article-ckeditor' );
     </script>
+        {{-- </div> --}}
+
 </body>
 </html>

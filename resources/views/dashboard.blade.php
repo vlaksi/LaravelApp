@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('kod')
+@section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -13,8 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+                    <a href="/posts/create" class="btn btn-primary">Kreiraj clanak </a>
+                    <h3>Tvoji objavljeni clanci </h3>
                 </div>
             </div>
         </div>

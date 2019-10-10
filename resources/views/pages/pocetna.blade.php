@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('kod')
+@section('content')
     
     <!-- Starting Home Page Section -->
     <div id="home">

@@ -11085,6 +11085,14 @@ input.btn.btn-primary.btn-lg:hover,
 
 /*****************************Pocetak Stila Logina-Registara**************************/
 
+element {
+  visibility: visible;
+}
+
+textarea#article-ckeditor.form-control {
+  visibility: visible !important;
+}
+
 .card {
   margin-top: 5rem;
 }

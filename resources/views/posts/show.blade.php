@@ -1,7 +1,7 @@
 @extends('layouts.app')
 <!-- Stranica prikazuje sve postove -->
 
-@section('kod')
+@section('content')
     <div class="fixed-background">                                
         <div class="darkPosts">                                      <!-- Kako bi slika u pozadini bila pokrivena prozirnom crnom(custom je css ) -->
             <div class="container">                            
