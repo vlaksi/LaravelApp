@@ -12,4 +12,9 @@ class Post extends Model                //Naslov mu je Post
     public $primaryKey = 'id';
     //Timestamps
     public $timestamps =true;
+
+    //kreiranje relacije
+    public function user(){
+        return $this->belongsTo('App\User');        //svaki post pripada nekom useru
+    }
 }

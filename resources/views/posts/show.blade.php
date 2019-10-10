@@ -10,7 +10,7 @@
                     {!!$post->body!!}                                <!-- Kako bi parsiralo tj i onaj ko pravi clanak mogao da prosledi html kod -->
                 </div>
                 <hr> 
-                <small>Napisano: {{ $post->created_at }}</small>
+                <small>Napisano: {{ $post->created_at }} od strane : {{$post->user->name}} </small>
 
                 <a href="/posts" class="btn btn-primary btn-lg">Go Back</a>
 

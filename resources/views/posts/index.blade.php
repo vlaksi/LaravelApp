@@ -16,7 +16,7 @@
                             <h3><a href="/posts/{{$post->id}}">{{ $post->title }}</a></h3> 
                             <!-- svaki post ima svoj id i znaci moze da ima svoju posebnu stranicu --> 
 
-                            <small>Napisano: {{ $post->created_at }}</small>
+                            <small>Napisano: {{ $post->created_at }} od strane : {{$post->user->name}}</small>
                         </div>
                     @endforeach
                     {{$posts->links()}}                     <!-- omogucava nam paginate(ogranicavanje broja postova po strani)-->

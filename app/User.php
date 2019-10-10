@@ -28,6 +28,12 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    //KREIRANJE RELACIJE
+    public function posts(){
+        return $this->hasMany('App\Post');                  //jedan user moze da ima vise postova
+    }
+
+
     /**
      * The attributes that should be cast to native types.
      *
