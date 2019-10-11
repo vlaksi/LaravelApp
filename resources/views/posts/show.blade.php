@@ -6,9 +6,11 @@
         <div class="darkPosts">                                      <!-- Kako bi slika u pozadini bila pokrivena prozirnom crnom(custom je css ) -->
             <div class="container">                            
                 <h1> {{ $post->title }}</h1>
+                <img src="/storage/cover_images/{{$post->cover_image}}" style="width:100%">
                 <div>
                     {!!$post->body!!}                                <!-- Kako bi parsiralo tj i onaj ko pravi clanak mogao da prosledi html kod -->
                 </div>
+
                 <hr> 
                 <small>Napisano: {{ $post->created_at }} od strane : {{$post->user->name}} </small>
 

@@ -10,7 +10,7 @@
                 <h1>Kreiraj clanak</h1>
 
                 <!-- dajemo mogucnost menjanja naziva posta -->
-                {!! Form::open( ['action' => ['PostsController@update',$post->id] , 'method' => 'POST' ] ) !!}
+                {!! Form::open( ['action' => ['PostsController@update',$post->id] , 'method' => 'POST' , 'enctype' => 'multipart/form-data' ] ) !!}
                 <!-- dodao da je u pitanju niz i dodao $post->id kako bi znao koji je post u pitanju -->
                     <div class="form-group">
                         {{Form::label('title','Naslov') }}            <!--prvi je polje objekta request, drugi parametar je sta ce da pise -->
@@ -20,6 +20,9 @@
                     <div class="form-group">
                         {{Form::label('body','Telo') }}            <!-- drugi parametar je sta ce da pise -->
                         {{Form::textarea('body',$post->body,['id'=>'article-ckeditor', 'class' => 'form-control' , 'placeholder' => 'Ovde se kuca clanak tj. teksta' ]  ) }}
+                    </div>
+                    <div class="form-group">                            <!-- kako bi dodali mogucnost za ubacivanje slike lakse -->
+                        {{ Form::file('cover_image') }}
                     </div>
                     {{ Form::hidden('_method','PUT') }}            <!-- posto method u formu ne moze biti PUT,ali uz pomoc hiddena moze ovako-->
                     {{ Form::submit('Objavi',[ 'class' => 'btn btn-primary' ] ) }} 

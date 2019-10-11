@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;                               // i s ovim mozemo da koristimo koju hocemo fju modela
 use DB;                                     //ako necemo elokvent da koristimo nego SQL
+//da bi mogli da koristimo storage i brisemo sliku potrebno nam je ovo ukljuciti
+use Illuminate\Support\Facades\Storage;
+
 class PostsController extends Controller
 {
     //TRAZI DA BUDEMO ULOGOVANI DA BI BILO STA VIDELI 
@@ -137,10 +140,30 @@ class PostsController extends Controller
             'body' => 'required'
         ]);
 
+        //Rukovanje uplodom fajla
+        //ako osoba zapravo izabere da ubaci nesto (browse..)
+        if($request->hasFile('cover_image')){
+            //dobijanje imena slike bez ekstenzije
+            $filenameWithExt = $request->file('cover_image')->getClientOriginalName();       // s ovim dobijemo npr marko.jpg ali zbog mogucnosti da jos
+                                                                    //neko uplouduje marko.jpg onda radimo sledece
+            //dobijanje imena samo fajla
+            $filename = pathinfo($filenameWithExt,PATHINFO_FILENAME);                 //php fja koja ekstrakuje ime fajla samo bez ekstenzije
+            //dobijanje samo 
+            $extension = $request->file('cover_image')->getClientOriginalExtension();
+            //ime koje cuvamo na kraju
+            $fileNameToStore = $filename .'_'.time().'.'.$extension;                //i imamo originalno ime za svaku promenljivu
+            
+            //Upload slike
+            $path = $request->file('cover_image')->storeAs('public/cover_images',$fileNameToStore);
+        }
+
         //Kreiranje posta
         $post = Post::find($id);                            //nadjemo taj post kako bi ga izmenili
         $post->title= $request->input('title');
         $post->body = $request->input('body');
+        if($request->hasFile('cover_image')){
+            $post->cover_image = $fileNameToStore;
+        }
         $post->save();
 
         return redirect('/posts')->with('success','Clanak je uspesno izmenjen!');
@@ -160,8 +183,15 @@ class PostsController extends Controller
         if(auth()->user()->id!== $post->user_id){          //ako nije njegov post a pokusa delete,prebaci ga na /posts
             return redirect('/posts')->with('error','Nemas pristup ovoj stranici!');
         }
- 
-        $post->delete();
+        
+        if($post->cover_image != 'noimage.jpg' ){
+            //obrisi sliku onda ,tj da ne bi slucajno izbrisali nasu difolt sliku (noimage.jpg)
+            //use Illuminate\Support\Facades\Storage; to smo uradili i mozemo sad Storage:: da koristimo
+            Storage::delete('public/cover_images/' . $post->cover_image);               //i tako i sliku obrisemo
+
+        }
+
+        $post->delete();                                                                //post obrisemo
 
         return redirect('/posts')->with('success','Clanak je uspesno uklonjen!');
     }
