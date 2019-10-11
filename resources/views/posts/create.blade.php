@@ -10,20 +10,25 @@
                 <h1>Kreiraj clanak</h1>
 
                 <!-- dajemo mogucnost davanja naziva novog posta -->
-                {!! Form::open( ['action' => 'PostsController@store' , 'method' => 'POST' ] ) !!}
+                {!! Form::open( ['action' => 'PostsController@store' , 'method' => 'POST', 'enctype' => 'multipart/data' ] ) !!}
+                <!-- 'enctype' => 'multipart/data' je neophodno kad god imamo upload nekog fajla(mi ovde omogucujemo ubacivanje slike)-->
                     <div class="form-group">
                         {{Form::label('title','Naslov') }}            <!--prvi je polje objekta request, drugi parametar je sta ce da pise -->
                         {{Form::text('title','',[ 'class' => 'form-control' , 'placeholder' => 'Ukucaj naslov teksta' ]  ) }}
                     </div>
                 <!-- DEO ZA BODY,kako bi mogao da se postavi neki clanak -->
-                    <div class="form-group">
-                        {{Form::label('body','Telo') }}            <!-- drugi parametar je sta ce da pise -->
-                        {{Form::textarea('body','',['id'=>'article-ckeditor', 'class' => 'form-control' , 'placeholder' => 'Ovde se kuca clanak tj. teksta' ]  ) }}
-                    </div>
-                    {{ Form::submit('Objavi',[ 'class' => 'btn btn-primary' ] ) }} 
-                    <!-- Kada se klikne 'Objavi' salje se request fji store -->
-                 {!! Form::close() !!}
-        
+                <div class="form-group">
+                    {{Form::label('body','Telo') }}            <!-- drugi parametar je sta ce da pise -->
+                    {{Form::textarea('body','',['id'=>'article-ckeditor', 'class' => 'form-control' , 'placeholder' => 'Ovde se kuca clanak tj. teksta' ]  ) }}
+                </div>
+                <div class="form-group">                            <!-- kako bi dodali mogucnost za ubacivanje slike lakse -->
+                    {{ Form::file('cover_image') }}
+                </div>
+
+                {{ Form::submit('Objavi',[ 'class' => 'btn btn-primary' ] ) }} 
+                <!-- Kada se klikne 'Objavi' salje se request fji store -->
+                {!! Form::close() !!}
+
                 <br><br><br><br><br><br>
             </div> <!-- END containter -->
         </div><!-- END  Dark2 -->
