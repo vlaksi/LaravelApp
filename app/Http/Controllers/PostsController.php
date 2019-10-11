@@ -7,6 +7,15 @@ use App\Post;                               // i s ovim mozemo da koristimo koju
 use DB;                                     //ako necemo elokvent da koristimo nego SQL
 class PostsController extends Controller
 {
+    //TRAZI DA BUDEMO ULOGOVANI DA BI BILO STA VIDELI 
+    public function __construct()
+    {
+        //$this->middleware('auth');  OVIM NISTA NE MOZE DA SE VIDI DOK SE NE ULOGUJEMO,ali ako prosledimo dodatne parametre
+        //onda mozemo jer to su posebni slucajevi
+        $this->middleware('auth',[ 'except' => ['index','show'] ]);     //ne moze bez logina se pristupi svemu osim index i show
+
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -83,6 +92,11 @@ class PostsController extends Controller
     {
         $post = Post::find($id);
 
+        //provera korisnika
+        if(auth()->user()->id !== $post->user_id){          //ako nije njegov post a pokusa edit,prebaci ga na /posts
+            return redirect('/posts')->with('error','Nemas pristup ovoj stranici!');
+        }
+
         return view('posts.edit')->with('post',$post);
     }
 
@@ -119,6 +133,12 @@ class PostsController extends Controller
     public function destroy($id)                            //id da bi znali koji post da unistimo
     {
         $post = Post::find($id);
+
+        //provera korisnika
+        if(auth()->user()->id!== $post->user_id){          //ako nije njegov post a pokusa delete,prebaci ga na /posts
+            return redirect('/posts')->with('error','Nemas pristup ovoj stranici!');
+        }
+ 
         $post->delete();
 
         return redirect('/posts')->with('success','Clanak je uspesno uklonjen!');
