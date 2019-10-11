@@ -12,11 +12,19 @@
                 @if (count($posts) > 0 )                        <!-- ako ima postova -->
                     @foreach ($posts as $post)                  <!-- prolazimo kroz svaki post -->
                         <div class="card card-body bg-light">
+                            
+                            <div class="row">                   <!-- dodajem da bi sliku mogao prikazati -->
+                                <div class="col-md-4 col-sm-4">
+                                    <img src="/storage/cover_images/{{$post->cover_image}}" style="width:100%">
+                                </div>
+                                <div class="col-md-8 col-sm-8">
+                                    <h3><a href="/posts/{{$post->id}}">{{ $post->title }}</a></h3> 
+                                    <!-- svaki post ima svoj id i znaci moze da ima svoju posebnu stranicu --> 
 
-                            <h3><a href="/posts/{{$post->id}}">{{ $post->title }}</a></h3> 
-                            <!-- svaki post ima svoj id i znaci moze da ima svoju posebnu stranicu --> 
+                                    <small>Napisano: {{ $post->created_at }} od strane : {{$post->user->name}}</small>
+                                </div>
+                            </div>
 
-                            <small>Napisano: {{ $post->created_at }} od strane : {{$post->user->name}}</small>
                         </div>
                     @endforeach
                     {{$posts->links()}}                     <!-- omogucava nam paginate(ogranicavanje broja postova po strani)-->

@@ -55,14 +55,36 @@ class PostsController extends Controller
         //Validacija tj provera 
         $this->validate($request, [   
             'title' => 'required',
-            'body' => 'required'
+            'body' => 'required',
+            'cover_image' => 'image|nullable|max:1999'      //image znaci da moze da se ubaci slika,nullable- da ne mora,i ogranicavamo koliko max moze biti slika velicine
         ]);
+        
+        //Rukovanje uplodom fajla
+        //ako osoba zapravo izabere da ubaci nesto (browse..)
+        if($request->hasFile('cover_image')){
+            //dobijanje imena slike bez ekstenzije
+            $filenameWithExt = $request->file('cover_image')->getClientOriginalName();       // s ovim dobijemo npr marko.jpg ali zbog mogucnosti da jos
+                                                                    //neko uplouduje marko.jpg onda radimo sledece
+            //dobijanje imena samo fajla
+            $filename = pathinfo($filenameWithExt,PATHINFO_FILENAME);                 //php fja koja ekstrakuje ime fajla samo bez ekstenzije
+            //dobijanje samo 
+            $extension = $request->file('cover_image')->getClientOriginalExtension();
+            //ime koje cuvamo na kraju
+            $fileNameToStore = $filename .'_'.time().'.'.$extension;                //i imamo originalno ime za svaku promenljivu
+            
+            //Upload slike
+            $path = $request->file('cover_image')->storeAs('public/cover_images',$fileNameToStore);
+        }else{
+            $fileNameToStore = 'noimage.jpg';               //ako nema slike da se stavi,stavicemo neku difolt sliku noimage.jpg
+        }
+
 
         //Kreiranje posta
         $post = new Post;
         $post->title= $request->input('title');
         $post->body = $request->input('body');
         $post->user_id = auth()->user()->id;                //uzima id trenutnog usera
+        $post->cover_image = $fileNameToStore;
         $post->save();
 
         return redirect('/posts')->with('success','Clanak je uspesno kreiran!');

@@ -10,8 +10,8 @@
                 <h1>Kreiraj clanak</h1>
 
                 <!-- dajemo mogucnost davanja naziva novog posta -->
-                {!! Form::open( ['action' => 'PostsController@store' , 'method' => 'POST', 'enctype' => 'multipart/data' ] ) !!}
-                <!-- 'enctype' => 'multipart/data' je neophodno kad god imamo upload nekog fajla(mi ovde omogucujemo ubacivanje slike)-->
+                {!! Form::open( ['action' => 'PostsController@store' , 'method' => 'POST', 'enctype' => 'multipart/form-data' ] ) !!}
+                <!-- 'enctype' => 'multipart/form-data' je neophodno kad god imamo upload nekog fajla(mi ovde omogucujemo ubacivanje slike)-->
                     <div class="form-group">
                         {{Form::label('title','Naslov') }}            <!--prvi je polje objekta request, drugi parametar je sta ce da pise -->
                         {{Form::text('title','',[ 'class' => 'form-control' , 'placeholder' => 'Ukucaj naslov teksta' ]  ) }}
